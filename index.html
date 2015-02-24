@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="cashRegister">
+  <head>
+    <title>Pizza & Cream</title>
+    <script src="lib/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/IceCreamsController.js"></script>
+    <script src="controllers/PizzasController.js"></script>
+    <script src="services/PriceFactory.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div ng-controller="IceCreamsCtrl">
+        <h3>Scoop Me</h3>
+        <form ng-submit="getTotal()">
+          <label for="icecreams">How many scoops?</label>
+          <input type="number" id="icecreams" ng-model="amount">
+          <button type="submit">add</button>
+        </form>
+        ${{results}}
+      </div>
+
+      <div ng-controller="PizzasCtrl">
+        <h3>Slice Me</h3>
+        <form ng-submit="getTotal()">
+          <label for="pizzas">How many slices?</label>
+          <input type="number" id="pizzas" ng-model="amount">
+          <button type="submit">add</button>
+        </form>
+        ${{results}}
+      </div>
+
+    </div>
+  </body>
+</html>
